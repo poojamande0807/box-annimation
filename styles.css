@@ -1,0 +1,67 @@
+body {
+    background-color: rgb(250, 244, 237);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+}
+
+.box-left {
+    width: 300px;
+    height: 100px;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 0%, rgba(0, 19, 158, 1) 0%, rgba(0, 211, 255, 0.936186974789916) 100%);
+    border-radius: 0 15px 15px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.box-right {
+    width: 300px;
+    height: 100px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 0%, rgba(0, 19, 158, 1) 0%, rgba(0, 211, 255, 0.936186974789916) 100%);
+    border-radius: 15px 0 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: bold;
+
+}
+
+
+.box-left {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 0%, rgba(0, 211, 255, 0.936186974789916), rgba(0, 19, 158, 1) 0%, 100%);
+    border-radius: 15px 0 0 15px;
+    animation: moveLeft 5s infinite;
+    left: 0%;
+    animation-name: shrinkLeftToRight;
+
+}
+
+.box-right {
+    background-color: #e74c3c;
+    animation: moveRight 5s infinite;
+    right: 0%;
+    animation-name: shrinkRightToLeft;
+}
+
+@keyframes shrinkLeftToRight {
+
+    0% {
+        transform: translateX(-50%) scale(0.5);
+    }
+}
+
+@keyframes shrinkRightToLeft {
+    0% {
+        transform: translateY(+50%) scale(0.5);
+    }
+}
